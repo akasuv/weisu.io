@@ -8,7 +8,7 @@ const supabaseKey = process.env.SUPABASE_SECRET_KEY as string;
 const supabase = createClient(supabaseUrl, supabaseKey);
 
 const Introudction = () => (
-  <div className="flex flex-col items-center gap-y-2 p-4">
+  <div className="flex flex-col items-center gap-y-2 py-8 px-4">
     <h2 className="text-xl font-black">Explore the web.</h2>
   </div>
 );
@@ -27,7 +27,7 @@ export default async function Home() {
       <div>
         <Introudction />
       </div>
-      <div className="pt-8 flex flex-col gap-y-8">
+      <div className="flex flex-col gap-y-8">
         {Object.keys(articleList).map((section) => (
           <ArticleList
             key={section}

@@ -15,7 +15,7 @@ const Article = async ({ params }: { params?: { url: string } }) => {
   const markdown = await getMarkdown(decodeURIComponent(params?.url as string));
 
   return (
-    <article className="prose dark:prose-invert mx-auto px-8 py-16 max-x-none">
+    <article className="prose dark:prose-invert mx-auto py-16 max-x-none">
       <ReactMarkdown remarkPlugins={[remarkGfm]}>{markdown}</ReactMarkdown>
     </article>
   );
