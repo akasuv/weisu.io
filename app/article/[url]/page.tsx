@@ -16,7 +16,7 @@ const Article = async ({ params }: { params?: { url: string } }) => {
 
   return (
     <article className="prose dark:prose-invert mx-auto px-8 py-16 max-x-none">
-      <ReactMarkdown children={markdown} remarkPlugins={[remarkGfm]} />
+      <ReactMarkdown remarkPlugins={[remarkGfm]}>{markdown}</ReactMarkdown>
     </article>
   );
 };

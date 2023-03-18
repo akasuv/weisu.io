@@ -1,7 +1,7 @@
 import { createClient } from "@supabase/supabase-js";
 import ArticleList from "@/components/ArticleList";
 import { Article } from "@/types";
-import groupBy from "lodash/groupby";
+import groupBy from "lodash/groupBy";
 
 const supabaseUrl = process.env.SUPABASE_URL as string;
 const supabaseKey = process.env.SUPABASE_SECRET_KEY as string;
