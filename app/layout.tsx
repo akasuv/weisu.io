@@ -1,4 +1,7 @@
+import { Analytics } from "@vercel/analytics/react";
+
 import Header from "@/components/Header";
+
 import "./globals.css";
 
 export const metadata = {
@@ -16,6 +19,7 @@ export default function RootLayout({
       <body className="max-w-screen-lg mx-auto px-4">
         <Header />
         {children}
+        <Analytics />
       </body>
     </html>
   );
