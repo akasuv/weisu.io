@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Wei Su</title>
+    </head>
+    <body>
+        <h1 style="padding-left: 4px">Wei Su</h1>
+        <ul style="padding-left: 8px; list-style: none">
+            <li>I code fast.</li>
+            <li style="margin-top: 8px">
+                Working on <a href="https://panoapp.ai">Pano</a>.
+            </li>
+        </ul>
+        <div
+            id="wordDisplay"
+            style="
+                font-size: 12px;
+                position: absolute;
+                bottom: 16px;
+                padding-left: 8px;
+            "
+        >
+            42
+        </div>
+
+        <script>
+            const words = ["肆贰", "SIER", "0x2A", "0o52", "0b101010", "42"];
+            let index = 0;
+
+            function displayWord() {
+                document.getElementById("wordDisplay").innerText = words[index];
+                index = (index + 1) % words.length;
+            }
+
+            setInterval(displayWord, 500);
+        </script>
+    </body>
+</html>
